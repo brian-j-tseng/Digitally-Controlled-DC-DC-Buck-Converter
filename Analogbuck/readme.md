@@ -3,11 +3,12 @@
 ## Introduction
 1. Design analog voltage mode buck converter with Matlab SISOTool.
    - Matlab SISOTool: Compensator design considering frequency response.
+   ![Closedloop](./figure/closedloop.png)
 2. Simulate the closed-loop system with PLECS and Matlab Simulink.
    - PLECS: Buck power stage model.
    - Matlab Simulink: Controller behavior model
-   [!PLECS]()
-   [!Closedloop]()
+   ![PLECS](./figure/PLECS.png)
+   
 
 ## Specicicaton
 | Parameter                             | Symbol  | Value               |
