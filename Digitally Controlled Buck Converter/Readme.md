@@ -28,12 +28,15 @@
 | Phase Margin                          |                  | >65 degrees         |
 
 ADC: The conversion range of ADC:  
-![C](./figure/closedloop.png)
+
+![C](./figure/ADC.png)
+
 DPWM: A necessary condition to avoid the limit cycle oscillation (A1):
-![C](./figure/closedloop.png)
+
+![C](./figure/NDPWM.png)
 
 ## Design process
-![C](./figure/closedloop.png)
+![C](./figure/3.jpg)
 Design by Emulation(BDE) - Red line
 Direct Digital Design(DDD) - Blue line
 Consideration of Delay Time
