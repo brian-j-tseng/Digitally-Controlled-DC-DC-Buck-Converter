@@ -19,4 +19,5 @@ VM = 3;
 T = Hsense*(1/VM)*Gvd;
 bode(T,{1,1e8});
 grid on;
+
 sisotool(Gvd_z);
