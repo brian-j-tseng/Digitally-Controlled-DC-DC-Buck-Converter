@@ -35,10 +35,9 @@ DPWM: A necessary condition to avoid the limit cycle oscillation (A1):
 
 ![C](./figure/NDPWM.png)
 
-## Design process
 ![C](./figure/3.jpg)
-Design by Emulation(BDE) - Red line
-Direct Digital Design(DDD) - Blue line
+
+## Design process
 Consideration of Delay Time
    - The total delay time is Td = Tconv + Tcal + D*Ts + Tg
    - Tconv = 420ns
