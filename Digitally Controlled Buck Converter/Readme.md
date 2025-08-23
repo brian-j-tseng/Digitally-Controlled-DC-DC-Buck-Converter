@@ -27,12 +27,10 @@
 | Capacitor Equivalent Series Resistance| R<sub>C</sub>    | 20mΩ                |
 | Phase Margin                          |                  | >65 degrees         |
 
-ADC:
-
-DPWM:
-$$
-N_{\text{DPWM}} \;>\; \log_{2}\!\left( \frac{H \, V_g}{\Delta V_q} \right)
-$$
+ADC: The conversion range of ADC:  
+![C](./figure/closedloop.png)
+DPWM: A necessary condition to avoid the limit cycle oscillation (A1):
+![C](./figure/closedloop.png)
 
 ## Design process
 ![C](./figure/closedloop.png)
@@ -52,5 +50,11 @@ Consideration of Delay Time
 4. S-to-Z conversion
 5. Co-simulation with ADC and DPWM
 
-
+## LCO evaluation
+ - Static situation
+    - A1: DC solution exists to the system
+    - A2: Compensator must include an integral action with a limited integral gain
+ - Dynamic situation
+    - B1: Compensator must result in sufficiently large gain margin of the linear part
+    - B2: Gain margin of the close loop system is at least 1.6
 
