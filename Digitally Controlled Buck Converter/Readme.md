@@ -27,15 +27,30 @@
 | Capacitor Equivalent Series Resistance| R<sub>C</sub>    | 20mΩ                |
 | Phase Margin                          |                  | >65 degrees         |
 
-## Design process
+ADC:
 
-### Design by Emulation(BDE) - Red line
+DPWM:
+$$
+N_{\text{DPWM}} \;>\; \log_{2}\!\left( \frac{H \, V_g}{\Delta V_q} \right)
+$$
+
+## Design process
 ![C](./figure/closedloop.png)
+Design by Emulation(BDE) - Red line
+Direct Digital Design(DDD) - Blue line
 Consideration of Delay Time
    - The total delay time is Td = Tconv + Tcal + D*Ts + Tg
    - Tconv = 420ns
    - Tcal = propagation delay (10ns)
    - Tg = 55ns + 10ns
    - D*Ts = duty cycle
-### Direct Digital Design(DDD) - Blue line
+
+### Design by Emulation
+1. import the transfer function of buck conbveter with delay to SISOTOOL
+2. Place the poles and zeros of the compensator on s-domain bode plot
+3. Optimize the compensator gain by root locus
+4. S-to-Z conversion
+5. Co-simulation with ADC and DPWM
+
+
 
