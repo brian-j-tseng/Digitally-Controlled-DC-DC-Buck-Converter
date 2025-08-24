@@ -27,26 +27,26 @@
 ![C](./figure/2.png)
 
 1. Compensator hardware implementation
-  - The Compensator is realized in direct-from.
-  - The multipliers will be replaced by LUTs.
-  - To reduce LUT's area the dominator will assign as z(z-1)
-  - transform parameter to binary code
+    - The Compensator is realized in direct-from.
+    - The multipliers will be replaced by LUTs.
+    - To reduce LUT's area the dominator will assign as z(z-1)
+    - transform parameter to binary code
 2. Choose Z-domain Compensator word-length
-  - the accuracy enough coefficients should be first
-  - Integer parts of the LUT: N = int[log2(1+2|k*e[n]max|)]
-  - fractional parts of the LUT: N = int[log2(1/(a+b+c))]
-  - N(total) = N1 + Nf +1
-  - word-length = max([Na, Nb, Nc])
+    - the accuracy enough coefficients should be first
+    - Integer parts of the LUT: N = int[log2(1+2|k*e[n]max|)]
+    - fractional parts of the LUT: N = int[log2(1/(a+b+c))]
+    - N(total) = N1 + Nf +1
+    - word-length = max([Na, Nb, Nc])
 3. Quantization
-  - Build a binary LUT, convert the compensator coefficients into binary form
-  - Multiply the coefficients with the input results to determine the number of bits and the internal value of LUT
+    - Build a binary LUT, convert the compensator coefficients into binary form
+    - Multiply the coefficients with the input results to determine the number of bits and the internal value of LUT
 4. Build the Verilog-HDL code for digital compensator
-  - Modulate the integer number to be consistent with the LUT results
-  - Fill in the results in the Look-up-table
-  - Truncation
+    - Modulate the integer number to be consistent with the LUT results
+    - Fill in the results in the Look-up-table
+    - Truncation
 
 ![C](./figure/1.png)
 
 5. Build Matlab Model with Modelsim
 6. Co-Simulation with Matlab/Modelsim
-Buck converter closed-loop simulation (including power stage, PWM, compensator)
+     - Buck converter closed-loop simulation (including power stage, PWM, compensator)
