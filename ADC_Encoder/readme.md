@@ -11,8 +11,8 @@
     - Input voltage ranges: 0V to 2𝑉𝑝−𝑝, 𝑉𝐷𝐷 = 3V ± 10%, 0V to 2.5𝑉𝑝−𝑝, 𝑉𝐷𝐷 = 5V ± 10%
     - Need to output encoded outputs from the ADC
 3. Digiatl buck converter closed-loop simulation
-  - transient
-  - steady-state
+      - transient
+      - steady-state
 
 ## System Specification
 | Parameter                             | Symbol  | Value               |
