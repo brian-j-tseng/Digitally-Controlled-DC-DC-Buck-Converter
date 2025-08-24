@@ -21,7 +21,11 @@
 | Capacitor Equivalent Series Resistance| R<sub>C</sub>    | 20mΩ                |
 | Phase Margin                          |                  | >65 degrees         |
 
+
 ## Implementation process
+
+![C](./figure/2.png)
+
 1. Compensator hardware implementation
   - The Compensator is realized in direct-from.
   - The multipliers will be replaced by LUTs.
@@ -40,6 +44,9 @@
   - Modulate the integer number to be consistent with the LUT results
   - Fill in the results in the Look-up-table
   - Truncation
+
+![C](./figure/1.png)
+
 5. Build Matlab Model with Modelsim
 6. Co-Simulation with Matlab/Modelsim
 Buck converter closed-loop simulation (including power stage, PWM, compensator)
