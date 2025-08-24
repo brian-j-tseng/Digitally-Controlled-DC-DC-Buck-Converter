@@ -39,11 +39,11 @@ DPWM: A necessary condition to avoid the limit cycle oscillation (A1):
 
 ## Design process
 Consideration of Delay Time
-   - The total delay time is Td = Tconv + Tcal + D*Ts + Tg
-   - Tconv = 420ns
-   - Tcal = propagation delay (10ns)
-   - Tg = 55ns + 10ns
-   - D*Ts = duty cycle
+      - The total delay time is Td = Tconv + Tcal + D*Ts + Tg
+      - Tconv = 420ns
+      - Tcal = propagation delay (10ns)
+      - Tg = 55ns + 10ns
+      - D*Ts = duty cycle
 
 ### Design by Emulation
 1. import the transfer function of buck conbveter with delay to SISOTOOL
@@ -53,10 +53,10 @@ Consideration of Delay Time
 5. Co-simulation with ADC and DPWM
 
 ## LCO evaluation
- - Static situation
-    - A1: DC solution exists to the system
-    - A2: Compensator must include an integral action with a limited integral gain
- - Dynamic situation
-    - B1: Compensator must result in sufficiently large gain margin of the linear part
-    - B2: Gain margin of the close loop system is at least 1.6
+    - Static situation
+       - A1: DC solution exists to the system
+       - A2: Compensator must include an integral action with a limited integral gain
+    - Dynamic situation
+       - B1: Compensator must result in sufficiently large gain margin of the linear part
+       - B2: Gain margin of the close loop system is at least 1.6
 
