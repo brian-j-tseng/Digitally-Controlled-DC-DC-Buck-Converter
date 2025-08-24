@@ -32,20 +32,20 @@ All components are designed according to the specifications below, using MATLAB 
 ![A](./figure/A.png)
 
 1. Construct an Analog buck converter system
-  - The design of the Buck DC-DC converter began with both open-loop and closed-loop implementations, where feedback control was introduced to improve transient response and output stability. By carefully placing poles and zeros in the analog compensator, stability criteria were satisfied with a phase margin exceeding 65° and a damping ratio above 0.7, ensuring fast settling and minimal oscillations.
+    - The design of the Buck DC-DC converter began with both open-loop and closed-loop implementations, where feedback control was introduced to improve transient response and output stability. By carefully placing poles and zeros in the analog compensator, stability criteria were satisfied with a phase margin exceeding 65° and a damping ratio above 0.7, ensuring fast settling and minimal oscillations.
 2. Derive the compensator from the s-domain to the z-domain using bilinear transformation with pre-warping
-  - Methodology: The compensator was transformed from the s-domain to the z-domain through a design-by-emulation strategy, facilitating effective digital implementation.
+    - Methodology: The compensator was transformed from the s-domain to the z-domain through a design-by-emulation strategy, facilitating effective digital implementation.
 3. Implement the digital compensator using a look-up table (LUT)
-  - Quantization: The compensator in the z-domain was discretized and mapped into a look-up table (LUT) using MATLAB, preserving numerical accuracy for hardware implementation.
-  - Hardware Realization: The digital compensator was then implemented in Verilog HDL, enabling seamless integration into the FPGA-based hardware system.
+    - Quantization: The compensator in the z-domain was discretized and mapped into a look-up table (LUT) using MATLAB, preserving numerical accuracy for hardware implementation.
+    - Hardware Realization: The digital compensator was then implemented in Verilog HDL, enabling seamless integration into the FPGA-based hardware system.
 4. Design the DPWM (Digital Pulse Width Modulator)
-  - Modules: Multiple DPWM configurations—including Counter, Hybrid, Dither, and Dither with dead-time—were designed, simulated, and evaluated for performance comparison.
+    - Modules: Multiple DPWM configurations—including Counter, Hybrid, Dither, and Dither with dead-time—were designed, simulated, and evaluated for performance comparison.
 5. Integrate the ADC encoder and perform ESL (Electronic System-Level) simulation
-  - Design Considerations: Core modules—including transport delay, zero-order hold, quantizer, and saturation—were incorporated to improve ADC accuracy and reliability.
-  - Integration: The ADC encoder was seamlessly integrated with the digital compensator, DPWM, and power stage, forming a closed-loop system.
+    - Design Considerations: Core modules—including transport delay, zero-order hold, quantizer, and saturation—were incorporated to improve ADC accuracy and reliability.
+    - Integration: The ADC encoder was seamlessly integrated with the digital compensator, DPWM, and power stage, forming a closed-loop system.
 6. Build the power stage on PCB, Conduct measurement and verification using FPGA implementation
-  - Simulation: A complete closed-loop system was simulated, integrating all previously designed modules. The simulation results confirmed system stability and compliance with performance requirements.
-  - Hardware Implementation: The digital controller was implemented on an FPGA using Quartus, while the external power stage was realized on a PCB to enable real-world hardware testing.
+    - Simulation: A complete closed-loop system was simulated, integrating all previously designed modules. The simulation results confirmed system stability and compliance with performance requirements.
+    - Hardware Implementation: The digital controller was implemented on an FPGA using Quartus, while the external power stage was realized on a PCB to enable real-world hardware testing.
 
 ![B](./figure/B.png)
 
