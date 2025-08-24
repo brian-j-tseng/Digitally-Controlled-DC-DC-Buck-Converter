@@ -1,7 +1,7 @@
 # ADC encoder
 
 
-![C](./figure/A.png)
+![C](./figure/B.png)
 
 ## introduction
 1. Add a sample_clk and an ADC encoder which is available in actual ADC implementation
