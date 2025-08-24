@@ -28,4 +28,4 @@ Note: the DPWM will be implemented in Verilog
 4. 9bit Dither DPWM with dead-time
   - A counter is used to track clock cycles and generate duty-cycle signals by comparing its value against predefined thresholds for the high and low states. Two comparators (duty_high and duty_low) are implemented to control the PWM outputs, while a dead-time mechanism is introduced to ensure that the two signals do not overlap.
 
-![C](./figure/3.jfif)
+![C](./figure/4.jfif)
